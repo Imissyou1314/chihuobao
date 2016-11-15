@@ -9,10 +9,14 @@
         id= #{userPhone} limit 1
     </select>
 
+    <select id="findById" resultType="User">
+        SELECT * FROM USER where id= #{id}
+    </select>
+
     <select id="queryAll" resultType="User">
         SELECT *
         FROM user
-        ORDER BY create_time DESC
+        ORDER BY createtime DESC
         limit #{offset},#{limit}
     </select>
 

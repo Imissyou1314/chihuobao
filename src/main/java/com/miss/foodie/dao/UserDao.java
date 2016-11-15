@@ -19,6 +19,13 @@ public interface UserDao {
     User queryByPhone(long userPhone);
 
     /**
+     * 根据用户Id获取用户
+     * @param id
+     * @return
+     */
+    User findById(long id);
+
+    /**
      * 查询所有用户
      * @param offset
      * @param limit
